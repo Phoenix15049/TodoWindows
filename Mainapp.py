@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from PyQt5 import QtWidgets
 
 ################################################################################
 ## Form generated from reading UI file 'MainapplEmoFU.ui'
@@ -7,7 +8,7 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-
+import sys
 from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
     QRect, QSize, QUrl, Qt)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
@@ -113,4 +114,6 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
     # retranslateUi
-
+app = QtWidgets.QApplication(sys.argv) # Create an instance of QtWidgets.QApplication
+window = Ui_MainWindow() # Create an instance of our class
+app.exec_()
