@@ -17,6 +17,7 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
 from PySide2.QtWidgets import *
 
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if MainWindow.objectName():
@@ -114,6 +115,15 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
     # retranslateUi
-app = QtWidgets.QApplication(sys.argv) # Create an instance of QtWidgets.QApplication
-window = Ui_MainWindow() # Create an instance of our class
-app.exec_()
+def setup_window(self):
+    app = QtWidgets.QApplication(sys.argv)
+    # create window
+    window = QtWidgets.QMainWindow()
+
+    ui = Ui_MainWindow()
+    # fill window
+    ui.setupUi(window)
+
+    window.show()
+
+    sys.exit(app.exec_())
