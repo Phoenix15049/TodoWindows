@@ -115,15 +115,22 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
     # retranslateUi
-def setup_window(self):
-    app = QtWidgets.QApplication(sys.argv)
-    # create window
-    window = QtWidgets.QMainWindow()
+# def setup_window(self):
+#     app = QtWidgets.QApplication(sys.argv)
+#     # create window
+#     window = QtWidgets.QMainWindow()
 
-    ui = Ui_MainWindow()
-    # fill window
-    ui.setupUi(window)
+#     ui = Ui_MainWindow()
+#     # fill window
+#     ui.setupUi(window)
 
+#     window.show()
+
+#     sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    app = QApplication([])
+    window = Ui_MainWindow()
     window.show()
-
     sys.exit(app.exec_())
